@@ -94,8 +94,8 @@ Informações mais precisas sobre como iniciá-las poderão ser encontradas em s
 <a id="contributors"></a>
 ## Contribuidores
 
-<a href="https://github.com/martinelli/femasssistemas/graphs/contributors">
-
+<a href="https://github.com/DS2-Femass/repositorio-tcc-femass/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=DS2-Femass/repositorio-tcc-femass" alt="contrib.rocks image" height="40"/>
 </a>
 
 <p align="right">(<a href="#readme-top">Voltar para o topo</a>)</p>
