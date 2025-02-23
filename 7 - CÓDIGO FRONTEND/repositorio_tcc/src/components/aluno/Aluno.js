@@ -584,7 +584,7 @@ class Aluno extends Component {
                 </Modal>
 
                 <Modal show={this.state.showModalEdit} onHide={() => this.closeModal('Edit')} centered size='xl'>
-                    <Modal.Header className='bg-dark text-white' closeButton>
+                    <Modal.Header className='bg-dark text-white' closeButton closeVariant='white'>
                     <Modal.Title>Editar {this.state.toEditItem && <>{this.state.toEditItem.titulo}</>}</Modal.Title>
                     </Modal.Header>
                     <form onSubmit={this.registerForm}>
@@ -599,11 +599,11 @@ class Aluno extends Component {
                                             </div>
                                             <div className="col-12">
                                                 <label htmlFor="inputName" className="col-12 col-form-label fw-bold">Email</label>
-                                                <textarea rows="3" className='form-control' style={{resize: "none"}} name="email" onChange={this.handleChange} value={this.state.email}></textarea>
+                                                <input type="text" className="form-control" name="email" onChange={this.handleChange} value={this.state.email}/>
                                             </div>
                                             <div className="col-12">
                                                 <label htmlFor="inputName" className="col-12 col-form-label fw-bold">Telefone</label>
-                                                <textarea rows="3" className='form-control' style={{resize: "none"}} name="telefone" onChange={this.handleChange} value={this.state.telefone}></textarea>
+                                                <input type="text" className="form-control" name="telefone" onChange={this.handleChange} value={this.state.telefone}/>
                                             </div>
                                         </div>
                                 </div>

@@ -678,7 +678,7 @@ class TCC extends Component {
                                         <p>{this.state.toViewItem.nomeCompletoAluno}</p>
                                     </div>
                                     <div>
-                                        <h5>Autor:</h5>
+                                        <h5>Orientador:</h5>
                                         <p>{this.state.toViewItem.nomeCompletoOrientador}</p>
                                     </div>
                                     <div>
