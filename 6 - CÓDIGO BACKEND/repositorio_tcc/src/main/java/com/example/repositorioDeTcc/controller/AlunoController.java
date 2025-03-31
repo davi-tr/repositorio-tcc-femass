@@ -62,7 +62,27 @@ public class AlunoController {
     @PostMapping(value = "/import", consumes = {"multipart/form-data"})
     public ResponseEntity<Integer> importAlunos(
             @RequestPart("file") MultipartFile file
-    ) throws IOException {
-        return ResponseEntity.ok().body(service.importAlunos(file));
+    ) {
+        try {
+            if (file.isEmpty()) {
+                return ResponseEntity.badRequest().body(-1); // Arquivo vazio
+            }
+
+            String contentType = file.getContentType();
+            if (contentType == null || !contentType.equals("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")) {
+                return ResponseEntity.badRequest().body(-2); // Tipo de arquivo inválido
+            }
+
+            int alunosImportados = service.importAlunos(file);
+            return ResponseEntity.ok().body(alunosImportados);
+        } catch (IOException e) {
+            // Log do erro
+            e.printStackTrace();
+            return ResponseEntity.internalServerError().body(-3); // Erro de IO
+        } catch (Exception e) {
+            // Log do erro
+            e.printStackTrace();
+            return ResponseEntity.internalServerError().body(-4); // Outros erros
+        }
     }
 }
