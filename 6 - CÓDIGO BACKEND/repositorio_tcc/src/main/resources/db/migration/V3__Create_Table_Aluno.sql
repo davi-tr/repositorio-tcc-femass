@@ -1,5 +1,0 @@
-CREATE TABLE IF NOT EXISTS aluno(
-    id UUID PRIMARY KEY,
-    matricula VARCHAR(12) NOT NULL UNIQUE,
-    CONSTRAINT fk_id_aluno FOREIGN KEY (id) REFERENCES pessoa(id)
-);
