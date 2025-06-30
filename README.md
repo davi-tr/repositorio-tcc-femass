@@ -24,7 +24,7 @@ Erros podem aparecer no console
 
 Comando para adicionar novas bibliotecas para o seu projeto, e fazer com que sejam instaladas ao rodar o comando de instalação
 
-
+aaaa
 ## Leia mais
 
 Para aprender React, cheque a [documentação do React](https://reactjs.org/).
